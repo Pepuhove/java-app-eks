@@ -106,7 +106,7 @@ jobs:
     - name: Create or update ECR secret
       run: |
         kubectl create secret docker-registry regcred \
-          --docker-server=${{ secrets.REGISTRY }} \
+          --docker-server=438465157882.dkr.ecr.af-south-1.amazonaws.com \
           --docker-username=AWS \
           --docker-password=$(aws ecr get-login-password) \
           --dry-run=client -o yaml | kubectl apply -f -
