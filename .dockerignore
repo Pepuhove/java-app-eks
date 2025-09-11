@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile
+
+# CI/CD configs (not needed in build context)
+.github/
+
+# IDE/project files
+.idea
+.vscode
+*.iml
+
+# OS junk
+*.swp
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Build output
+target/
+!target/*.war   # allow only WARs if you ever copy directly without Maven
+
+# Helm/K8s configs (not needed for image build)
+helm/
+kubernetes/
+
+# Test sources
+src/test/
