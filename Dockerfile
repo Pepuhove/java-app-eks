@@ -16,7 +16,7 @@ RUN mvn clean package -DskipTests --no-transfer-progress
 # -------------------------
 # 2. RUNTIME STAGE
 # -------------------------
-FROM tomcat:9.0-jre17-temurin-alpine
+FROM tomcat:9.0.98-jdk17-temurin
 
 # Remove default Tomcat apps
 RUN rm -rf /usr/local/tomcat/webapps/*
