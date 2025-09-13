@@ -4,11 +4,14 @@ metadata:
   name: java-app-service
   labels:
     app: java-app
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
 spec:
   type: LoadBalancer
   selector:
     app: java-app
   ports:
     - name: http
-      port: 80
+      port: 8080      # Change this to 8080
       targetPort: 8080
+      protocol: TCP
